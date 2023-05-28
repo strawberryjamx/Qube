@@ -1,0 +1,180 @@
+
+.home {
+    min-height: 70vh;
+    background: url(../images/home-bg.jpg) no-repeat top center fixed; /* Modify background properties */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Add position relative */
+    z-index: -1; /* Set z-index to position behind the header */
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; /* Set higher z-index to keep the header on top */
+  }
+  
+ .home .content{
+    text-align: center;
+    width: 60rem;
+ }
+
+ .home .content h3{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 2rem;
+   margin-top: 80px;
+}
+ 
+ .home .content h3{
+    font-size: 5.5rem;
+    color:var(--red);
+    text-transform: uppercase;
+ }
+ 
+ .home .content p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:1.8rem;
+    color:var(--black);
+    padding:1rem 0;
+    line-height: 1.5;
+ }
+
+ .home-contact {
+   margin-right: 400px;
+   margin-left: 0;
+}
+
+ .home-contact .container {
+   max-width: 800px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: flex-start;
+}
+
+.home-contact .content {
+   text-align: center;
+}
+
+.home-contact .content h3 {
+   font-size: 2.5rem;
+   text-transform: uppercase;
+   color: #333;
+   margin-top: 1.5rem;
+}
+
+.home-contact .content p {
+   font-size: 1.6rem;
+   line-height: 1.6;
+   color:var(--light-color);
+   margin-bottom: 3rem;
+}
+
+
+.white-btn1 {
+   display: inline-block;
+   background-color: #fff;
+   color: #333;
+   padding: 1.2rem 3rem;
+   font-size: 1.6rem;
+   text-transform: uppercase;
+   text-decoration: none;
+   border: 2px solid #333;
+   border-radius: 3rem;
+   transition: background-color 0.3s ease;
+}
+
+.white-btn1:hover {
+   background-color: #dda7d1;
+}
+
+.about {
+   padding: 6rem 0;
+   padding: 4rem 0;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+}
+
+.box {
+   background-color: rgba(255, 255, 255, 0.285);
+   backdrop-filter: blur(8px);
+   padding: 3rem;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+   text-align: center;
+   max-width: 600px;
+}
+
+.content h3 {
+   font-size: 2.5rem;
+   text-transform: uppercase;
+   color: #333;
+   margin-bottom: 2rem;
+}
+
+.content p {
+   font-size: 1.8rem;
+   color: #000000;
+   line-height: 1.6;
+   margin-bottom: 2.5rem;
+}
+
+.about .flex{
+   max-width: 1200px;
+   margin:0 auto;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap:1.5rem;
+}
+
+.about .flex .image{
+   flex:1 1 40rem;
+}
+
+.about .flex .image img{
+   width: 100%;
+}
+
+.about .flex .img{
+   margin-left: 10rem;
+   flex: 40rem 1 1;
+}
+
+.about .flex .img img{
+   max-width: 100%;
+}
+
+.about .flex .content{
+   flex:1 1 40rem;
+   text-align: center;
+}
+
+.about .flex .content h3{
+   font-size: 3rem;
+   text-transform: capitalize;
+   color:var(--black);
+}
+
+.about .flex .content p{
+   padding:1rem 0;
+   font-size: 1.5rem;
+   color:var(--light-color);
+   line-height: 2;
+}
+
+.about .flex:nth-child(2){
+   margin:3rem auto;
+   flex-wrap: wrap-reverse;
+}
