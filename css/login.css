@@ -1,0 +1,289 @@
+/* Color Variables */
+:root {
+  --gray: #000000;
+  --lavender: #CBC0D3;
+  --pale: #EAC7CC;
+  --white: #f6f6f6;
+  --pink: #C2AEB9;
+  --darkpink: #d666c5;
+}
+
+/* Font Variables */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora');
+
+/* Global Styles */
+body {
+  background: var(--lavender);
+}
+
+/* Div Box Styling */
+.container {
+  margin: -20px auto ;
+  width: 650px;
+  height: 550px;
+  position: relative;
+}
+
+.welcome {
+  background: var(--white);
+  width: 650px;
+  height: 415px;
+  position: absolute;
+  top: 25%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pinkbox {
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  background: var(--pale);
+  width: 320px;
+  height: 500px;
+  border-radius: 5px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.nodisplay {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.leftbox,
+.rightbox {
+  position: absolute;
+  width: 50%;
+  transition: 1s all ease;
+}
+
+.leftbox {
+  left: -2%;
+}
+.rightbox {
+  right: -2%;
+}
+
+/* Font & Button Styling */
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-top: 95px;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 2em;
+  letter-spacing: 8px;
+}
+
+.title {
+  font-family: 'Lora', serif;
+  color: var(--gray);
+  font-size: 1.8em;
+  line-height: 1.1em;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 20%;
+}
+.desc {
+  margin-top: -8px;
+}
+.account {
+  margin-top: 45%;
+  font-size: 10px;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 2px;
+  color: var(--gray);
+  text-align: center;
+}
+
+span.msg  {
+  color: var(--pale);
+}
+
+.rs {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--darkpink);
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  margin: 50px auto 0;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 350px;
+  background-color: var(--white);
+  animation-name: popup;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cube {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 43%;
+  left: 29%;
+  opacity: 0.7;
+}
+
+.smaller {
+  width: 90px;
+  height: 100px;
+  top: 48%;
+  left: 38%;
+  opacity: 0.9;
+}
+
+button {
+  padding: 12px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  border-radius: 10px;
+  margin: auto;
+  outline: none;
+  display: block;
+}
+
+.button {
+  margin-top: 3%;
+  background: var(--white);
+  color: var(--pink);
+  border: solid 1px var(--pale);
+}
+
+.button:hover {
+  background: var(--pale);
+  color: var(--white);
+  transition: background-color 1s ease-out;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 7px;
+}
+.more-padding {
+  padding-top: 35px;
+}
+.more-padding input {
+  padding: 12px;
+}
+.more-padding .submit {
+  margin-top: 45px;
+}
+.submit {
+  margin-top: 25px;
+  padding: 12px;
+  border-color: var(--pink);
+}
+
+.submit:hover {
+  background: var(--lavender);
+  border-color: darken(var(--lavender), 5%);
+}
+
+input {
+  background: var(--pale);
+  width: 65%;
+  color: var(--pink);
+  border: none;
+  border-bottom: 1px solid rgba(246, 246, 246, 0.5);
+  padding: 9px;
+  margin: 7px;
+}
+
+input::placeholder {
+  color: rgba(246, 246, 246, 1);
+  letter-spacing: 2px;
+  font-size: 1.3em;
+  font-weight: 100;
+}
+
+input:focus {
+  color: var(--gray);
+  outline: none;
+  border-bottom: 1.2px solid rgba(var(--pink), 0.7);
+  font-size: 1em;
+  transition: 0.8s all ease;
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
+label {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--pink);
+  font-size: 0.8em;
+  letter-spacing: 1px;
+}
+
+.checkbox {
+  display: inline;
+  white-space: nowrap;
+  position: relative;
+  left: -62px;
+  top: 5px;
+}
+
+input[type='checkbox'] {
+  width: 7px;
+  background: var(--pink);
+}
+
+.checkbox input[type='checkbox']:checked + label {
+  color: var(--pink);
+  transition: 0.5s all ease;
+}
+
+.message {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--darkpink);
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  margin: 50px auto 0;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 350px;
+  background-color: var(--white);
+  animation-name: popup;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+.message i {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #721c24;
+}
+
+.message.success i {
+  color: #155724;
+}
+
